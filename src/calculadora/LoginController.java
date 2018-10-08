@@ -43,8 +43,14 @@ public class LoginController implements Initializable {
     }    
 
     @FXML
-    private void cadastrarL(ActionEvent event) {
-  
+    private void cadastrarL(ActionEvent event) throws IOException {
+  FXMLLoader fxmlLoader = new FXMLLoader();
+    fxmlLoader.setLocation(getClass().getResource("cadastro.fxml"));
+    Scene scene = new Scene(fxmlLoader.load(),500,500);
+    Stage stage = new Stage();
+    stage.setTitle("Cadastro");
+    stage.setScene(scene);
+    stage.show();
     }
     
 
@@ -83,15 +89,4 @@ public class LoginController implements Initializable {
     }
 }
 
-//      EntityManagerFactory emf = Persistence.createEntityManagerFactory("Calculadora");
-//        EntityManager em = emf.createEntityManager();
-//
-//        Login a = new Login();
-//        a.setUsuario(txtusu.getText());
-//        a.setSenha(txtsenha.getText());
-//
-//        em.getTransaction().begin();
-//
-//        em.persist(a);
-//
-//        em.getTransaction().commit();
+      

@@ -21,6 +21,15 @@ public class Login {
     private Integer id; 
     private String usuario;
     private String senha;
+    private String confsenha;
+
+    public String getConfsenha() {
+        return confsenha;
+    }
+
+    public void setConfsenha(String confsenha) {
+        this.confsenha = confsenha;
+    }
     public Integer getId() {
         return id;
     }
