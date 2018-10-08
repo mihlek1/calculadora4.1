@@ -13,6 +13,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  * FXML Controller class
@@ -198,12 +201,27 @@ public class CalculadoraController implements Initializable {
                         TELA.setText(String.valueOf(resultado));
                     break;
                 }
+                EntityManagerFactory emf = Persistence.createEntityManagerFactory("Calculadora");
+                EntityManager em = emf.createEntityManager();
+
+                Calcles a = new Calcles();
+                a.setFirstN(valor1);
+                a.setSecondN(valor2);
+                a.setOperator(op);
+                a.setResult(resultado);
+                em.getTransaction().begin();
+
+                em.persist(a);
+
+                em.getTransaction().commit();
                 valor1 = 0;
                 valor2 = 0;
                 op = "";
                 
-                
-            }
+              
+       
+    }
+            
         }
         );
     }
