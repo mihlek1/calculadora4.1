@@ -64,4 +64,7 @@ public class Calcles {
     public void setResult(double result) {
         this.result = result;
     }
+    public String toString() {
+        return this.operator;
+    }
 }
