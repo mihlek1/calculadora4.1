@@ -34,8 +34,6 @@ public class CalculadoraController implements Initializable {
     @FXML
     private Button ZEROBTN;
     @FXML
-    private Button PONTOBTN;
-    @FXML
     private Button DOISBTN;
     @FXML
     private Button CINCOBTN;
@@ -203,6 +201,8 @@ public class CalculadoraController implements Initializable {
                 valor1 = 0;
                 valor2 = 0;
                 op = "";
+                
+                
             }
         }
         );
