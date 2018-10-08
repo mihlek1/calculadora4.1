@@ -7,15 +7,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculadora.MenuPrincipalController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <MenuBar layoutY="-1.0" prefHeight="30.0" prefWidth="502.0" style="-fx-background-color: #7B68EE;">
         <menus>
           <Menu mnemonicParsing="false" text="Abrir">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#abrircadastrodealuno" text="Calculadora" />
-                  <MenuItem mnemonicParsing="false" onAction="#abrircadastrodealuno" text="Mostrar" />
+              <MenuItem mnemonicParsing="false" onAction="#abrircalculadora" text="Calculadora" />
+                  <MenuItem mnemonicParsing="false" text="Mostrar" />
                   <MenuItem mnemonicParsing="false" onAction="#fecharprojeto" text="Fechar" />
             </items>
           </Menu>

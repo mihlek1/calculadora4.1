@@ -54,8 +54,5 @@ catch(IOException e){
     
     }
 
-    @FXML
-    private void soma(ActionEvent event) {
-    }
     
 }
