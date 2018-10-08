@@ -5,16 +5,23 @@
  */
 package calculadora;
 
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
  * FXML Controller class
  *
- * @author 02977022201
+ * @author 04154521209
  */
-public class MAINMENUController implements Initializable {
+public class LoginController implements Initializable {
+
+    @FXML
+    private JFXTextField txtusu;
+    @FXML
+    private JFXTextField txtsenha;
 
     /**
      * Initializes the controller class.
