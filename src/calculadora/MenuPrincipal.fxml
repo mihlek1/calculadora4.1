@@ -14,7 +14,7 @@
           <Menu mnemonicParsing="false" text="Abrir">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#abrircalculadora" text="Calculadora" />
-                  <MenuItem mnemonicParsing="false" text="Mostrar" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirListagem" text="Mostrar" />
                   <MenuItem mnemonicParsing="false" onAction="#fecharprojeto" text="Fechar" />
             </items>
           </Menu>

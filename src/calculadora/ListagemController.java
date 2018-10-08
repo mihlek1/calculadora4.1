@@ -28,8 +28,7 @@ public class ListagemController implements Initializable {
 
     @FXML
     private TableView<?> tabela;
-    @FXML
-    private TableView<?> tbAlunos;
+   
 
     /**
      * Initializes the controller class.
@@ -37,17 +36,17 @@ public class ListagemController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("aula");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Calculadora");
         EntityManager em = emf.createEntityManager();
 
         // Busca utilizando HQL
-        Query query = em.createQuery("SELECT a FROM Aluno as a");
+        Query query = em.createQuery("SELECT a FROM Calcles as a");
         List<Calcles> alunos = query.getResultList();
 
         // Converte lista para observable list
         ObservableList ob = FXCollections.observableArrayList(alunos);
         // Adiciona resultado a Tabela
-        tbAlunos.setItems(ob);
+        tabela.setItems(ob);
         // Adiciona resultado ao Combobox
                
 
@@ -55,8 +54,5 @@ public class ListagemController implements Initializable {
         emf.close();
     }
 
-    @FXML
-    private void select(MouseEvent event) {
-    }
     
 }

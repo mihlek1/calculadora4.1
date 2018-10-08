@@ -8,40 +8,33 @@
 <?import javafx.scene.layout.*?>
 <?import calculadora.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="calculadora.ListagemController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculadora.ListagemController">
    <children>
-      <TableView fx:id="tabela" prefHeight="400.0" prefWidth="600.0">
+      <TableView fx:id="tabela" prefHeight="521.0" prefWidth="618.0">
         <columns>
           <TableColumn text="id">
             <cellValueFactory><PropertyValueFactory property="id" />
             </cellValueFactory>
          </TableColumn>
-         <TableColumn prefWidth="262.0" text="Nome">
-            <cellValueFactory><PropertyValueFactory property="nome" />
+         <TableColumn text="firstN">
+            <cellValueFactory><PropertyValueFactory property="firstN" />
             </cellValueFactory>
          </TableColumn>
-         <TableColumn prefWidth="103.0" text="CPF">
-             <cellValueFactory><PropertyValueFactory property="cpf" />
-             </cellValueFactory>
-        </TableColumn>
+         <TableColumn text="secondN">
+            <cellValueFactory><PropertyValueFactory property="secondN" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn text="operator">
+            <cellValueFactory><PropertyValueFactory property="operator" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn text="result">
+            <cellValueFactory><PropertyValueFactory property="result" />
+            </cellValueFactory>
+         </TableColumn>
         </columns>
       </TableView>
       
-      <TableView fx:id="tbAlunos" layoutX="6.0" layoutY="88.0" onMouseClicked="#select" prefHeight="200.0" prefWidth="273.0">
-        <columns>
-              <TableColumn text="Id">
-                  <cellValueFactory><PropertyValueFactory property="id" />
-                  </cellValueFactory>
-               </TableColumn>
-               <TableColumn prefWidth="262.0" text="Nome">
-                  <cellValueFactory><PropertyValueFactory property="nome" />
-                  </cellValueFactory>
-               </TableColumn>
-               <TableColumn prefWidth="103.0" text="CPF">
-                   <cellValueFactory><PropertyValueFactory property="cpf" />
-                   </cellValueFactory>
-              </TableColumn>
-        </columns>
-      </TableView> 
+    
    </children>
 </AnchorPane>
