@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -61,19 +62,15 @@ public class CadastroController implements Initializable {
       em.getTransaction().commit();
         }
         else{
-        
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("A senha é diferente");
+            alert.showAndWait();
         }
     }
 
     @FXML
     private void voltar(ActionEvent event) throws IOException {
-    FXMLLoader fxmlLoader = new FXMLLoader();
-    fxmlLoader.setLocation(getClass().getResource("Login.fxml"));
-    Scene scene = new Scene(fxmlLoader.load(),500,500);
-    Stage stage = new Stage();
-    stage.setTitle("Calculadora");
-    stage.setScene(scene);
-    stage.show();
+   System.exit(0);
     }
     
 }
